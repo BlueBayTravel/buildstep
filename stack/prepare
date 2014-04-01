@@ -11,6 +11,11 @@ xargs apt-get install -y --force-yes < /build/packages.txt
 apt-get clean
 
 #
+# SET THE TIMEZONE TO BE GMT
+#
+ln -sf /usr/share/zoneinfo/Europe/London /etc/localtime
+
+#
 # SUPPORTED BUILDPACKS
 #
 mkdir -p /build/buildpacks
